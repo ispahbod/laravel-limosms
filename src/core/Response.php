@@ -12,7 +12,9 @@ class Response
     }
     public function isSuccessful()
     {
-        if (isset($this->response['Success']) && $this->response['Success'] == true) {
+        if (isset($this->response['success']) && $this->response['success'] == true) {
+            return true;
+        }elseif (isset($this->response['Success']) && $this->response['Success'] == true){
             return true;
         }
         return false;
